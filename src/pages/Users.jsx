@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import UserCard from "../components/UserCard/UserCard"
+
 import { getAllUsers } from "../services/userService"
 
 const Users = () => {
@@ -13,8 +15,18 @@ const Users = () => {
     fetchData()
   }, [])
 
+  const displayUsers = () => {
+    return users.map(user => {
+      return (
+        <UserCard key={user.id} data={user} />
+      )
+    })
+  }
+
   return (
-    <div>Users</div>
+    <div>
+      { displayUsers() }
+    </div>
   )
 }
 

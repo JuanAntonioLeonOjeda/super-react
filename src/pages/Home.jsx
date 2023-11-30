@@ -1,9 +1,12 @@
-import AppBarComponent from '../components/AppBarComponent/AppBarComponent'
+import { useContext } from 'react'
+
+import { SearchContext } from '../context/searchContext'
 
 const Home = () => {
+  const { searchInput } = useContext(SearchContext)
   return (
     <>
-      <AppBarComponent />
+      {searchInput}
     </>
   )
 }

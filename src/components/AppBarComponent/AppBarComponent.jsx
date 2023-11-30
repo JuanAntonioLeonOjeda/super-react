@@ -16,6 +16,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
+import SearchBar from "../SearchBar/SearchBar";
+
 import './AppBarComponent.css'
 
 const drawerWidth = 240;
@@ -70,6 +72,7 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
+          <SearchBar />
           <Typography
             variant="h6"
             component="div"

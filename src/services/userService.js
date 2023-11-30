@@ -1,6 +1,6 @@
 import app from "./config"
 
-const getAllUsers = async () => {
+export const getAllUsers = async () => {
   try {
     const { data } = await app.get('/users')
     return data
@@ -9,6 +9,11 @@ const getAllUsers = async () => {
   }
 }
 
-export {
-  getAllUsers
+export const getOneUser = async (id) => {
+  try {
+    const { data } = await app.get(`/users/${id}`)
+    return data
+  } catch (error) {
+    console.error(error);
+  }
 }
