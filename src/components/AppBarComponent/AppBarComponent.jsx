@@ -21,7 +21,8 @@ import './AppBarComponent.css'
 const drawerWidth = 240;
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' }
+  { name: 'About', path: '/about' },
+  { name: 'Users', path: '/users' }
 ];
 
 function DrawerAppBar(props) {
